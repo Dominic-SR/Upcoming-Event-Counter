@@ -6,6 +6,10 @@
     font-family: 'Poppins', sans-serif
 }
 
+html{
+    font-size: 12px;
+}
+
 body{
     height: 100vh;
     width: 100vh;
@@ -19,33 +23,90 @@ body{
     flex-direction: column;
 }
 
-p{
-    font-size: 13px;
-}
-
-.newyear{
-    font-family: 'Inspiration', cursive;
-    font-size: 50px;
-    font-weight: 400;
-    margin-top: 30px;
-}
-
 .counter{
     display: flex;
-    margin-top: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px;
 }
 
-.box{
-    width: 50px;
-    height: 50px;
+body>p{
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.counter .box{
+    width: 80px;
+    height: 70px;
     text-align: center;
+    margin-right: 10px;
+    position: relative
 }
 
-.box h2{
-    font-size: 20px;
+.counter .box::after{
+    content: ":";
+    height: 70px;
+    width: 10px;
+    position: absolute;
+    top:0;
+    right: 0;
+    font-size: 2.5rem;
+  }
+  .counter .box:last-of-type::after{
+    display: none;
+  }
+ 
+  .counter .box h2{
+    font-size: 2.5rem;
     font-weight: 500;
-}
-
-.box small{
-    font-size: 10px;
-}
+  }
+ 
+  .form{
+    margin-top: 20px;
+  }
+  .form input[type="text"]{
+    width: 230px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid rgba(255,255,255,0.5);
+    background-color: transparent;
+    border-radius: 5px;
+    color:white;
+  }
+  .form input[type="text"]::placeholder{
+    color:rgba(255,255,255,0.7);
+  }
+  .form button{
+    width: 120px;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    margin-left: 10px;
+    background-color: cornflowerblue;
+    color:white;
+  }
+ 
+  @media (min-width:576px) {
+    html{
+      font-size:18px ;
+    }
+    .counter .box{
+      width: 100px;
+      height: 100px;
+    }
+    .form input[type="text"]{
+      width: 300px;
+    }
+  }
+ 
+  @media (min-width:768px) {
+    html{
+      font-size:20px ;
+    }
+    .counter .box{
+      width: 110px;
+      height: 110px;
+    }
+    .form input[type="text"]{
+      width: 340px;
+    }
+  }
