@@ -1,14 +1,6 @@
-<styele>
-  h1{
-  text-align:center;
-  }
 
-  .content {
-   padding: 10px;
-  }
-</styele>
- <h1>Upcoming Event Counter</h1>
+<h1 style="text-align: center">Upcoming Event Counter</h1>
 
- <div class="content">
+ <div style="padding:10px">
    Time counter for upcoming <b>New year</b> 🎊
  </div>
